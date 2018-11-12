@@ -1,16 +1,15 @@
-function testNoteListStartWithOneEntry() {
+function testNoteListStartsWithNoNotes() {
   var noteList = new NoteList();
-  assert.isTrue(noteList.entries.length === 1);
-  assert.isTrue(noteList.entries[0] === 'My favourite language is JavaScript');
+  assert.isTrue(noteList.getNotes().length === 0);
 };
 
-testNoteListStartWithOneEntry();
+testNoteListStartWithNoNotes();
 
-function testAddingNewNotes() {
+function testCanAddAndStoreNewNotes() {
   var noteList = new NoteList();
-  noteList.addNote('Hello');
-  assert.isTrue(noteList.text === 'Hello');
-  assert.isTrue(noteList.getNotes().slice(-1)[0] === 'Hello');
+  noteList.addNote('My Favourite drink: Fanta');
+  console.log(noteList.getNotes())
+  assert.isEqualTo(noteList.getNotes()[0].getText(), 'My Favourite drink: Fanta');
 };
 
-testAddingNewNotes();
+testCanAddAndStoreNewNotes();

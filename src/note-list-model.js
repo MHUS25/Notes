@@ -1,18 +1,16 @@
 (function(exports) {
   function NoteList() {
-    this.entries = ['My favourite language is JavaScript'];
-    this.text = 'Favourite drink: seltzer';
+    this.notes = [];
+  };
 
+  NoteList.prototype.getNotes = function() {
+    return this.notes;
+  };
+
+  NoteList.prototype.addNote = function(text) {
+    note = new Note(text);
+    this.notes.push(note);
   };
 
   exports.NoteList = NoteList;
 })(this);
-
-NoteList.prototype.getNotes = function() {
-  return this.entries;
-};
-
-NoteList.prototype.addNote = function(note) {
-  this.text = note;
-  this.entries.push(note);
-};
