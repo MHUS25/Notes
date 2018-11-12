@@ -6,7 +6,6 @@ function testNoteListStartWithOneEntry() {
 
 testNoteListStartWithOneEntry();
 
-
 function testAddingNewNotes() {
   var noteList = new NoteList();
   noteList.addNote('Hello');
