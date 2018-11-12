@@ -1,7 +1,7 @@
 (function(exports) {
-  function Notes() {
+  function NoteList() {
     this.entries = ['My favourite language is JavaScript'];
   };
 
-  exports.Notes = Notes;
+  exports.NoteList = NoteList;
 })(this);
