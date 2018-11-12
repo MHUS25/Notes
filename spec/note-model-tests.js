@@ -1,6 +1,6 @@
-function testNotesStartWithOneEntry() {
-  var notes = new Notes();
-  assert.isTrue(notes.text === 'My favourite language is JavaScript');
+function testNoteStartWithOneEntry() {
+  var note = new Note();
+  assert.isTrue(note.getText() === 'My favourite language is JavaScript');
 };
 
-testNotesStartWithOneEntry();
+testNoteStartWithOneEntry();
