@@ -9,5 +9,6 @@
     ).join('')
     return `<ul>${list}</ul>`
   }
+  
   exports.NoteListView = NoteListView
 })(this)
