@@ -12,3 +12,13 @@ function testCanAddAndStoreNewNotes() {
 };
 
 testCanAddAndStoreNewNotes();
+
+function testCreatesEachNoteWithUniqueId() {
+  var noteList = new NoteList();
+  noteList.addNote('My Favourite drink: Fanta');
+  noteList.addNote('My Favourite drink: Chocolate Milk');
+  assert.isEqualTo(noteList.getNotes()[0].getId(), 0);
+  assert.isEqualTo(noteList.getNotes()[1].getId(), 1);
+};
+
+testCreatesEachNoteWithUniqueId()
