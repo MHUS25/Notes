@@ -10,6 +10,6 @@ function testInnerHTMLPropertyCanBeChanged() {
   div.id = 'app';
   document.body.appendChild(div);
   noteController.insertHTML();
-  assert.isEqualTo(div.innerHTML, '<ul><li><div>Favourite drink: Fanta</div></li></ul>');
+  assert.isEqualTo(div.innerHTML, '<ul><li><div>Favourite drink: Fan...</div></li></ul>');
 }
 testInnerHTMLPropertyCanBeChanged()
