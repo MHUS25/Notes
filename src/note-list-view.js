@@ -13,7 +13,7 @@
 
   NoteListView.prototype.noteListHTML = function() {
     list = this.noteList.getNotes().map(
-      note => `<li><div>${this._shorten(note.getText())}</div></li>`
+      note => `<li><div><a href="#notes/${note.getId()}">${this._shorten(note.getText())}</a></div></li>`
     ).join('')
     return `<ul>${list}</ul>`
   }
