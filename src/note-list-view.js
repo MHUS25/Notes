@@ -4,7 +4,7 @@
     MAX_LENGTH = 20
   }
 
-  NoteListView.prototype._abbreviation = function(string) {
+  NoteListView.prototype._shorten = function(string) {
     if (string.length > MAX_LENGTH) {
       return string.slice(0,MAX_LENGTH).concat('...')
     }
@@ -13,7 +13,7 @@
 
   NoteListView.prototype.noteListHTML = function() {
     list = this.noteList.getNotes().map(
-      note => `<li><div>${this._abbreviation(note.getText())}</div></li>`
+      note => `<li><div>${this._shorten(note.getText())}</div></li>`
     ).join('')
     return `<ul>${list}</ul>`
   }

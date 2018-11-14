@@ -1,2 +1,4 @@
 # Notes App
-Notes App in Vanilla JavaScript without a test framework
+
+* Program written in Vanilla JavaScript
+* Writing own testing framework
