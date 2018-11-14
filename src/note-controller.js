@@ -1,19 +1,14 @@
 (function(exports) {
-  function NoteController() {
-    this.noteList = new NoteList
-  }
-
-  NoteController.prototype.addsNote = function() {
+  function NoteController(noteList) {
+    this.noteList = noteList;
     this.noteList.addNote('Favourite drink: Fanta');
+    this.noteListView = new NoteListView(this.noteList)
   }
 
-  NoteController.prototype.insertHTML = function () {
-    var noteListView = new NoteListView(this.notelist);
-    var html = noteListView.noteListHTML();
-    document.getElementById('app').textContent="howdy";
+  NoteController.prototype.insertHTML = function() {
+    var html = this.noteListView.noteListHTML();
+    document.getElementById('app').innerHTML = html;
   };
-
-  // document.getElementById('app').textContent="howdy";
 
   exports.NoteController = NoteController
 })(this)
