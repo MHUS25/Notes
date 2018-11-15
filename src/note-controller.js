@@ -37,5 +37,12 @@
     })
   };
 
+  NoteController.prototype.listenForSubmit = function() {
+    document.getElementById("text").addEventListener("submit", function(event) {
+      event.preventDefault();
+      console.log(event);
+    })
+  };
+
   exports.NoteController = NoteController
 })(this)

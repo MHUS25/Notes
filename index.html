@@ -25,10 +25,9 @@
 
   <script>
     var noteController = new NoteController(new NoteList);
-
-    noteController.insertHTML()
-
-    noteController.makeUrlChangeShowNoteForCurrentPage()
+    noteController.insertHTML();
+    noteController.makeUrlChangeShowNoteForCurrentPage();
+    noteController.listenForSubmit();
   </script>
 
 </body>
