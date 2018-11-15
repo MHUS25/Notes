@@ -11,8 +11,8 @@
   };
 
   NoteController.prototype.makeUrlChangeShowNoteForCurrentPage = function() {
-    bounded = this._showNoteForCurrentPage.bind(this)
-    window.addEventListener("hashchange", bounded);
+    var boundShowNoteForCurrentPage = this._showNoteForCurrentPage.bind(this)
+    window.addEventListener("hashchange", boundShowNoteForCurrentPage);
   };
 
   NoteController.prototype._showNoteForCurrentPage = function() {
