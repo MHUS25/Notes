@@ -32,7 +32,7 @@
 
   NoteController.prototype._findNoteById = function(id) {
     return this.noteList.getNotes().find(function(note) {
-      return note.id = id;
+      return String(note.id) === id;
     })
   };
 
