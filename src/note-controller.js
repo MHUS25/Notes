@@ -37,10 +37,10 @@
   };
 
   NoteController.prototype.listenForSubmit = function() {
-    document.getElementById("text").addEventListener("submit", function(event) {
+    document.getElementById("text").addEventListener("submit", (event) => {
       event.preventDefault();
-      console.log(event);
-      console.log(event.target[0].value);
+      this.noteList.addNote(event.target[0].value);
+      this.insertHTML();
     })
   };
 
