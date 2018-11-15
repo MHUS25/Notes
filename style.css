@@ -1,0 +1,12 @@
+body {
+  font-family: 'futura';
+  color: black;
+  background-color: white;
+  font-size: 180%
+}
+
+h1 {
+  font-size: 350%;
+  margin: 10px 0 30px 0;
+  font-family: 'futura';
+}
