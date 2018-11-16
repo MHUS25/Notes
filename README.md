@@ -1,7 +1,8 @@
 # Notes App
 
-* Program written in Vanilla JavaScript
-* Writing own testing framework
+* A Single Page note-taking application
+* Written in Vanilla JavaScript
+* Tests written without a testing library
 
 
 ## User Stories
